@@ -396,7 +396,7 @@ import * as yup from "yup";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useMutation } from "@tanstack/react-query";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 // Types
 interface LoginFormInputs {
@@ -445,7 +445,7 @@ const API_BASE_URL =
   "https://wtsacademy.dedicateddevelopers.us/api";
 
 const Login: React.FC = () => {
-  const router = useRouter();
+  
   const searchParams = useSearchParams();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -773,5 +773,6 @@ const Login: React.FC = () => {
     </Box>
   );
 };
+
 
 export default Login;
